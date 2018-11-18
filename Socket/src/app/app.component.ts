@@ -46,6 +46,6 @@ export class AppComponent implements OnInit, OnDestroy {
   }
 
   public isSystemMessage(message) {
-    return message.startWith("/") ? "<strong>" + message.substring(1) + "</strong>" : message;
+    return message.startsWith("/") ? "<strong>" + message.substring(1) + "</strong>" : message;
   }
 }
