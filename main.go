@@ -132,9 +132,9 @@ func wsPage(res http.ResponseWriter, req *http.Request) {
 		http.NotFound(res, req)
 		return
 	}
-	uid := uuid.Must(uuid.NewV4())
+	id, _ := uuid.NewV4()
 	client := &Client{
-		id:     uid.String(),
+		id:     id.String(),
 		socket: conn,
 		send:   make(chan []byte),
 	}
